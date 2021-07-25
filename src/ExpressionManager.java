@@ -50,7 +50,7 @@ public class ExpressionManager {
             try {
                 a = Integer.parseInt(arrayExpression[0]);
                 b = Integer.parseInt(arrayExpression[1]);
-                if (a > 10 | b > 10 | a < 0 | b < 0) {
+                if (a > 10 || b > 10 || a < 0 || b < 0) {
                     throw new CalculatorException("Вы ввели неправильные данные");
                 }
             } catch (NumberFormatException e) {
