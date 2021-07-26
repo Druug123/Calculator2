@@ -75,7 +75,6 @@ public class ExpressionManager {
 
     public void calculate(ArabianOrRome kindOfNumber, Operation theOperation) throws CalculatorException {
         int result;
-        double divisionResult;
         if (kindOfNumber == ArabianOrRome.ARABIAN) {
             switch (theOperation) {
                 case PLUS: {
@@ -94,10 +93,8 @@ public class ExpressionManager {
                     break;
                 }
                 case DIVISION: {
-                    double aD = a;
-                    double bD = b;
-                if (!(bD==0)) {divisionResult = aD / bD;
-                    System.out.println(divisionResult);
+                if (!(b==0)) {result = a / b;
+                    System.out.println(result);
                     break;
                     } else {throw new CalculatorException("Вы ввели неправильные данные");
                     }
