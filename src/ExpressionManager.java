@@ -122,9 +122,7 @@ public class ExpressionManager {
                     break;
                 }
                 case DIVISION: {
-                    if (!(a % b == 0)) {
-                        throw new CalculatorException("Вы ввели неправильные данные");
-                    } else result = a / b;
+                    result = a / b;
                     System.out.println(convertToRome(result));
                     break;
                 }
