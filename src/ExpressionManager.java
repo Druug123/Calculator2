@@ -96,9 +96,11 @@ public class ExpressionManager {
                 case DIVISION: {
                     double aD = a;
                     double bD = b;
-                    divisionResult = aD / bD;
+                if (!(bD==0)) {divisionResult = aD / bD;
                     System.out.println(divisionResult);
                     break;
+                    } else {throw new CalculatorException("Вы ввели неправильные данные");
+                    }
                 }
 
             }
